@@ -1,0 +1,49 @@
+.footer {
+	padding: 3rem 6rem;
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-content: flex-start;
+		border-bottom: 1px solid $gray-light;
+		padding: 2rem;
+
+		&-brand {
+			display: flex;
+			flex-wrap: nowrap;
+			align-content: center;
+
+			&--img {
+				max-height: 2.8rem;
+			}
+
+			&--text {
+				color: $heading-color;
+				font-size: 2.5rem;
+				font-weight: 700;
+				padding-left: $s-size;
+			}
+		}
+
+		&-menu {
+
+			& > ul {
+				list-style-type: none;
+
+				& > li {
+					display: inline-block;
+					margin-right: 3rem;
+
+					& > a {
+						color: $text-color;
+					}
+				}
+			}
+		}
+	}
+
+	&__copyright {
+		//padding: 3rem;
+		font-size: $s-size;
+	}
+}

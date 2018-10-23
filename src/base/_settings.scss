@@ -1,0 +1,121 @@
+//Fonts
+$f-headings: 'Nunito Sans', sans-serif;
+$f-body: 'Nunito', sans-serif;
+
+//Colors
+$logo-yellow: #fcd9a9;
+$logo-yellow-dark: #ffbd42;
+$logo-blue: #a3e9e5;
+$logo-blue-dark: #3972c5;
+$logo-red: #fe8f8d;
+$logo-red-dark: #f14747;
+$gray-light: #f2f2f2;
+$gray-shadow: #ddd;
+$gray-dark: #555;
+$text-color: #6f6f6f;
+$heading-color: #474747;
+
+//Sizing
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+//Animations
+@keyframes fallingGreen {
+	0% { transform: translateY(-20rem) rotate(40deg); opacity: 0 }
+	100% {transform: translateY(0) rotate(40deg); opacity: 1}
+}
+
+@keyframes fallingYellow {
+	0% { transform: translateY(-20rem) rotate(-55deg); opacity: 0 }
+	100% {transform: translateY(0) rotate(-55deg); opacity: 1}
+}
+
+@keyframes fallingBlue {
+	0% { transform: translateY(-20rem) rotate(102deg); opacity: 0 }
+	100% {transform: translateY(0) rotate(102deg); opacity: 1}
+}
+
+@keyframes fallingRed {
+	0% {transform: translateY(-100rem) rotate(-25deg); opacity: 0; }
+	100% { transform: translateY(0) rotate(-25deg); opacity: 1; }
+}
+
+//Utilities
+.mar-to-sm { margin-top: $m-size; }
+.mar-to-md { margin-top: $l-size; }
+.mar-to-lg { margin-top: calc(#{$xl-size} * 2); }
+
+//Buttons
+.btn {
+	display: inline-block;
+
+	&--black {
+		color: #fff;
+		padding: $s-size $l-size;
+		font-size: $m-size;
+		font-weight: 700;
+		letter-spacing: 1px;
+		border-radius: 100px;
+		background-color: #000;
+		box-shadow: 0px 7px 10px $heading-color;
+		transition: all .3s;
+		cursor: pointer;
+
+		&:hover {
+			transform: translateY(-3px);
+			background-color: lighten(#000, 10%);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+	}
+
+	&--white {
+		padding: $s-size $l-size;
+		font-size: $s-size;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-weight: 700;
+		cursor: pointer;
+		border-radius: 100px;
+		background-color: #fff;
+		transition: all .3s;
+		border: none;
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0px 7px 10px $heading-color;
+		}
+
+		&:active {
+			transform: translateY(0);
+			box-shadow: none;
+		}
+
+		&--red { color: $logo-red-dark; }
+		&--blue { color: $logo-blue-dark; }
+		&--yellow { color: $logo-yellow-dark; }
+	}
+
+	&--link-dashed {
+		font-size: $m-size;
+		color: #000;
+		font-weight: bold;
+		border-bottom: 2px solid currentColor;
+		padding: .8rem 0;
+		transition: all .4s;
+
+		&:hover {
+			color: lighten(#000, 40%);
+		}
+	}
+
+	&--link {
+		color: #000;
+		font-size: $m-size;
+		font-weight: bold;
+	}
+}
