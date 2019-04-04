@@ -1,41 +1,195 @@
-.navbar {
+.navbar 
+{
+	background-color: #fff;
+	box-shadow: 0 2px 3px $gray-shadow;
+	height: 6rem;
 	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	padding: $m-size $m-size $m-size $xl-size;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 5;
 
-	&__brand {
+	// LOGO AND BRAND NAME
+	&__brand 
+	{
 		display: flex;
-		justify-content: space-between;
-		width: 19rem;
-		padding: 1rem;
+		align-items: center;
 
-		&--img {
+		&--img 
+		{
 			max-height: $l-size;
-			margin-top: 2px;
-			animation: fadeInBottom .8s;
-			animation-delay: .2s;
+			padding-left: $s-size;
 		}
 
-		&--text {
-			font-size: 2.8rem;
-			font-weight: bold;
-			animation: fadeInBottom .8s;
-			color: #000;
-			padding-left: 1rem;
+		&--text 
+		{
+			font-size: $m-size;
+			padding-left: $s-size;
 		}
 	}
 
-	&__menu {
-		list-style: none;
+	// HAMBURGER BUTTON
+	& > label
+	{
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		width: 5rem;
+		padding: .4rem 1rem;
+		order: 1;
+		cursor: pointer;
 
-		& li {
-			display: inline-block;
-			padding: 1rem $m-size;
+		& > span
+		{
+			background-color: $gray-dark;
+			height: 4px;
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			-o-transition: all .5s ease;
+			-ms-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+	}
+
+	& > input[type=checkbox] {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+		/* For mobile, it's typically better to position checkbox on top of clickable area and turn opacity to 0 instead. */
+
+		&:checked ~ .navbar__menu
+		{
+			display: flex;
+		}
+
+		&:checked ~ label > span
+		{
+			&:first-child
+			{
+				transform: translateY(1rem) rotate(45deg);
+			}
+
+			&:nth-child(2)
+			{
+				transform: translateY(-.1rem) rotate(-45deg);
+			}
+
+			&:last-child
+			{
+				display: none;
+			}
+		}
+	}
+
+	// NAVBAR MENU
+	&__menu 
+	{
+		list-style: none;
+		display: flex;
+		padding-left: $m-size;
+		flex: 1;
+
+		& li 
+		{
+			font-size: $s-size;
+			padding-right: $s-size;
+			display: flex;
+
+			&:last-child
+			{
+				margin-left: auto;
+			}
+
+			& a 
+			{
+				display: flex;
+				align-items: center;
+			}
 		}
 	}
 }
+
+@media only screen and (max-width: 665px) 
+{
+	.navbar
+	{
+		justify-content: space-between;
+		height: 100%;
+		padding: 1rem 0;
+		flex-wrap: wrap;
+
+		// HAMBURGER MENU
+		& > label
+		{
+			display: flex;
+			order: 0;
+		}
+
+		&__menu
+		{
+			order: 1;
+			display: none;
+			flex-direction: column;
+			flex: 0 0 100%;
+
+			& li
+			{
+				flex: 1;
+				justify-content: center;
+				
+
+				&:last-child
+				{
+					margin: 0 !important;
+				}
+
+				& a 
+				{
+					justify-content: center;
+					padding: 1.5rem 2rem;
+				}
+			}
+		}
+	}
+
+	// NAVBAR BLUE BUTTON
+	a.btn--blue
+	{
+		background-color: transparent !important;
+		color: $gray-dark !important;
+		padding: 1.5rem 2rem !important;
+		border-bottom: .4rem solid transparent !important;
+		border-radius: 0 !important;
+		margin: 0 !important;
+
+		&:active
+		{
+			transform: translate(0, 0) !important;
+			-webkit-transform: translate(0, 0) !important;
+		}
+
+		&:hover
+		{
+			color: $blue-dark !important;
+			border-bottom: .4rem solid currentColor !important;
+		}
+	}
+}
+
+
+// background-color: #3498DB;
+// 	border-bottom: .5rem solid #2980B9;
+// 	position: relative;
+// 	padding: 1rem 3rem;
+// 	border-radius: 10px;
+// 	color: #fff !important;
+// 	height: 4.5rem;
+// 	margin-top: .5rem;
+	
+// 	&:hover
+// 	{
+// 		background-color: #56a5da;
+// 	}
+
+// 	&:active
+// 	{
+// 		transform: translate(0 , .3rem);
+// 		-webkit-transform: translate(0, .3rem);
+// 		border-bottom: 1px solid;
+// 	}
