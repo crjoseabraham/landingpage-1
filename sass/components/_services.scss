@@ -24,7 +24,7 @@
 	&__description
 	{
 		display: flex;
-		padding: $l-size 0;
+		padding: $l-size 8rem;
 		justify-content: space-evenly;
 		position: relative;
 		z-index: 9;
@@ -38,7 +38,7 @@
 		flex-direction: column;
 		align-items: center;
 		padding: 3rem 5rem;
-		max-width: 32rem;
+		max-width: 30%;
 		box-shadow: 2px 2px 20px $gray-shadow;
 		transition: all .4s ease;
 
@@ -64,5 +64,105 @@
 		{
 			box-shadow: 2px 2px 10px $gray-dark;
 		}
+	}
+}
+
+@media only screen and (max-width: 1200px) 
+{
+	.services__title
+	{
+		padding: 0 10rem;
+	}
+}
+
+@media only screen and (max-width: 1050px) 
+{
+	.services__title
+	{
+		padding: 0 5rem;
+	}
+
+	.services__description
+	{
+		& > .services__service
+		{
+			padding: 2rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) 
+{
+	.services__title > h2
+	{
+		font-size: 3.4rem;
+	}
+
+	.services__description
+	{
+		padding: $l-size 2rem;
+	}
+}
+
+@media only screen and (max-width: 700px) 
+{
+	.services__title
+	{
+		padding: 0 2rem;
+
+		& > h2
+		{
+			font-size: 3rem;
+		}
+	}
+
+	.services__description
+	{
+		padding: $l-size;
+		flex-direction: column;
+
+		& > .services__service
+		{
+			align-items: flex-start;
+			max-width: 100%;
+			padding: 0 2rem 2rem 2rem;
+			position: relative;
+
+			&:not(:first-child)
+			{
+				margin-top: 2rem;
+			}
+
+			& > h3
+			{
+				font-size: 2.4rem;
+			}
+
+			& > img
+			{
+				max-width: 5rem;
+				position: absolute;
+				right: 1rem;
+				bottom: 1rem;
+				opacity: .5;
+			}
+
+			& > p
+			{
+				text-align: left;
+			}
+		}
+	}
+
+	.btn--yellow
+	{
+		margin-top: 1.5rem !important;
+	}
+
+	.shape--cross
+	{
+		position: absolute;
+		top: 68% !important;
+		left: 95% !important;
 	}
 }

@@ -2,13 +2,12 @@
 {
   &--square
   {
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     background-color: #e74a3b;
     position: absolute;
     top: 4rem;
     left: 10rem;
-    transform: rotate(25deg);
     opacity: .3;
     z-index: 8;
   }
