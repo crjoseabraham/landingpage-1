@@ -1,21 +1,20 @@
 .header {
 	background-color: #00459e;
+	background-image: url("../img/440.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	height: 85vh;
 	display: flex;
 	overflow: hidden;
 
-	&__left,
-	&__right
-	{
-		flex: 1;
-	}
-
 	&__left
 	{
-		padding: 10rem 4rem;
+		padding: 10rem 8rem;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		width: 50%;
 
 		& > p
 		{
@@ -26,20 +25,9 @@
 		}
 	}
 
-	&__right
-	{
-		align-self: flex-end;
-		transform: translateY(5rem);
-	}
-
 	&__title
 	{
 		color: #fff;
-	}
-
-	&__img
-	{
-		max-width: 74rem;
 	}
 }
 
@@ -72,13 +60,18 @@
 		font-size: $xl-size;
 	}
 
+	.header
+	{
+		background-image: linear-gradient(to bottom right, rgba(0, 69, 158, .8), rgba(100, 120, 232, .8)), url("../img/440.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+	}
+
 	.header__left
 	{
 		padding: 10rem 5rem;
-	}
-	.header__right
-	{
-		display: none;
+		width: 100%;
 	}
 
 	.btn--green
