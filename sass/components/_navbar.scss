@@ -51,7 +51,6 @@
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
-		/* For mobile, it's typically better to position checkbox on top of clickable area and turn opacity to 0 instead. */
 
 		&:checked ~ .navbar__menu
 		{
@@ -68,6 +67,7 @@
 			&:nth-child(2)
 			{
 				transform: translateY(-.1rem) rotate(-45deg);
+				-moz-transform: translateY(.1rem) rotate(-45deg);
 			}
 
 			&:last-child
@@ -171,25 +171,3 @@
 		}
 	}
 }
-
-
-// background-color: #3498DB;
-// 	border-bottom: .5rem solid #2980B9;
-// 	position: relative;
-// 	padding: 1rem 3rem;
-// 	border-radius: 10px;
-// 	color: #fff !important;
-// 	height: 4.5rem;
-// 	margin-top: .5rem;
-	
-// 	&:hover
-// 	{
-// 		background-color: #56a5da;
-// 	}
-
-// 	&:active
-// 	{
-// 		transform: translate(0 , .3rem);
-// 		-webkit-transform: translate(0, .3rem);
-// 		border-bottom: 1px solid;
-// 	}

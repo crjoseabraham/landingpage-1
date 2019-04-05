@@ -62,21 +62,17 @@ a.nav--green:hover
 	border-bottom: .4rem solid currentColor; 
 }
 
+// Color 'push' buttons
 .btn--blue
 {
 	background-color: #3498DB;
 	border-bottom: .5rem solid #2980B9;
+	margin-top: .5rem;
 	position: relative;
 	padding: 1rem 3rem;
 	border-radius: 10px;
 	color: #fff !important;
 	height: 4.5rem;
-	margin-top: .5rem;
-	
-	&:hover
-	{
-		background-color: #56a5da;
-	}
 
 	&:active
 	{
@@ -84,77 +80,33 @@ a.nav--green:hover
 		-webkit-transform: translate(0, .3rem);
 		border-bottom: 1px solid;
 	}
-}
-/*
-.btn {
-	display: inline-block;
 
-	&--black {
-		color: #fff;
-		padding: $s-size $l-size;
-		font-size: $m-size;
-		font-weight: 700;
-		letter-spacing: 1px;
-		border-radius: 100px;
-		background-color: #000;
-		box-shadow: 0px 7px 10px $heading-color;
-		transition: all .3s;
-		cursor: pointer;
-
-		&:hover {
-			transform: translateY(-3px);
-			background-color: lighten(#000, 10%);
-		}
-
-		&:active {
-			transform: translateY(0);
-		}
-	}
-
-	&--white {
-		padding: $s-size $l-size;
-		font-size: $s-size;
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		font-weight: 700;
-		cursor: pointer;
-		border-radius: 100px;
-		background-color: #fff;
-		transition: all .3s;
-		border: none;
-
-		&:hover {
-			transform: translateY(-3px);
-			box-shadow: 0px 7px 10px $heading-color;
-		}
-
-		&:active {
-			transform: translateY(0);
-			box-shadow: none;
-		}
-
-		&--red { color: $red-dark; }
-		&--blue { color: $logo-blue-dark; }
-		&--yellow { color: $logo-yellow-dark; }
-	}
-
-	&--link-dashed {
-		font-size: $m-size;
-		color: #000;
-		font-weight: bold;
-		border-bottom: 2px solid currentColor;
-		padding: .8rem 0;
-		transition: all .4s;
-
-		&:hover {
-			color: lighten(#000, 40%);
-		}
-	}
-
-	&--link {
-		color: #000;
-		font-size: $m-size;
-		font-weight: bold;
+	&:hover
+	{
+		background-color: #56a5da;
 	}
 }
-*/
+
+.btn--green
+{
+	font-size: 1.6rem;
+	background-color: #41b734;
+	border-bottom:  .5rem solid #308a27;
+	position: relative;
+	padding: 1rem 3rem;
+	border-radius: 10px;
+	color: #fff !important;
+	height: 4.5rem;
+
+	&:active
+	{
+		transform: translate(0 , .3rem);
+		-webkit-transform: translate(0, .3rem);
+		border-bottom: 1px solid #308a27;
+	}
+
+	&:hover
+	{
+		background-color: $green;
+	}
+}
