@@ -1,0 +1,152 @@
+.shape
+{
+  &--square
+  {
+    width: 10rem;
+    height: 10rem;
+    background-color: #e74a3b;
+    position: absolute;
+    top: 4rem;
+    left: 10rem;
+    transform: rotate(25deg);
+    opacity: .3;
+    z-index: 8;
+  }
+
+  &--circle
+  {
+    width: 10rem;
+    height: 10rem;
+    background-color: #4e73df;
+    border-radius: 50%;
+    position: absolute;
+    right: 7rem;
+    top: 19rem;
+    z-index: 8;
+    opacity: .3;
+  }
+
+  &--triangle
+  {
+    width: 0;
+    height: 0;
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    border-bottom: 6rem solid #1cc88a;
+    position: absolute;
+    top: 28rem;
+    left: 2rem;
+    transform: rotate(-14deg);
+    z-index: 8;
+    opacity: .3;
+
+    &-2
+    {
+      width: 0;
+      height: 0;
+      border-left: 5rem solid transparent;
+      border-right: 5rem solid transparent;
+      border-top: 10rem solid #36b9cc;
+      transform: rotate(40deg);
+      position: absolute;
+      top: 60%;
+      left: 62%;
+      z-index: 8;
+      opacity: .3;
+    }
+  }
+
+  &--star
+  {
+    margin: 50px 0;
+    position: absolute;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    border-left: 100px solid transparent; 
+    display: none;
+
+    &::before
+    {
+      border-bottom: 80px solid red;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+
+    &::after
+    {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+  }
+
+  &--diamond
+  {
+    width: 0;
+    height: 0;
+    border: 5rem solid transparent;
+    border-bottom: 7rem solid #f6c23e;
+    position: absolute;
+    top: 45rem;
+    left: 3rem;
+    z-index: 8;
+    opacity: .6;
+
+    &::after
+    {
+      content: '';
+      position: absolute;
+      left: -5rem;
+      top: 7rem;
+      width: 0;
+      height: 0;
+      border: 5rem solid transparent;
+      border-top: 7rem solid #f6c23e;
+    }
+  }
+
+  &--cross
+  {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    background: #858796;
+    height: 6.5rem;
+    width: 1.5rem;
+    z-index: 8;
+    opacity: .3;
+    transform: rotate(45deg);
+
+    &::after
+    {
+      background: #858796;
+      content: "";
+      height: 1.5rem;
+      left: -2.5rem;
+      position: absolute;
+      top: 2.5rem;
+      width: 6.5rem;
+    }
+  }
+}
