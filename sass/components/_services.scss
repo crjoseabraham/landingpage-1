@@ -4,6 +4,7 @@
 	flex-direction: column;
 	padding: $xl-size 0;
 	position: relative;
+	overflow: hidden;
 	z-index: 10;
 
 	&__title

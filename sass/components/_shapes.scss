@@ -148,4 +148,15 @@
       width: 6.5rem;
     }
   }
+
+  &--gray-block
+  {
+    width: 61rem;
+    height: 12.8rem;
+    background-color: #dfdfe1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 8;
+  }
 }
