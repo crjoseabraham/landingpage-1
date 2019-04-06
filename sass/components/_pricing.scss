@@ -5,7 +5,6 @@
 	background-position: bottom left;
 	background-size: contain;
 	position: relative;
-	height: 80vh;
 	display: flex;
 	justify-content: flex-end;
 
@@ -32,13 +31,14 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    width: 100%;
+		width: 100%;
+		padding: 0;
+		padding-bottom: $m-size;
 	}
 
 	&__card
 	{
 		width: 27rem;
-		height: 38rem;
 		display: flex;
 		box-shadow: 0px 7px 10px $gray-dark;
 		border-radius: 8px;
@@ -114,8 +114,10 @@
 			{
 				padding: .5rem;
 
-				& > span
+				&::before
 				{
+					content: '🗸';
+					font-size: $s-size;
 					color: greenyellow;
 				}
 			}
@@ -123,10 +125,125 @@
 	}
 }
 
-@media only screen and (max-width: 755px) 
+@media only screen and (max-width: 1100px)
+{
+	.pricing
+	{
+		&__content
+		{
+			width: 90%;
+		}
+	}
+}
+
+@media only screen and (max-width: 860px)
+{
+	.pricing
+	{
+		&__title
+		{
+			padding-top: 3rem;
+		}
+
+		&__content
+		{
+			width: 100%;
+			padding: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) 
 {
 	.shape--gray-block
 	{
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 700px) 
+{
+	.pricing
+	{
+		&__cards
+		{
+			flex-direction: column;
+		}
+
+		&__card
+		{
+			width: 80%;
+			height: auto;
+			align-items: flex-start;
+			padding: 2rem 4rem;
+			margin-top: $l-size;
+
+			&:first-child,
+			&:nth-child(2)
+			{				
+				z-index: 10;
+				transform: none;
+
+				&:hover
+				{
+					transform: none;
+
+					& ~ .main
+					{
+						transform: none;
+					}
+				}
+			}
+
+			& > h3
+			{
+				font-size: $m-size;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			& > a 
+			{ 
+				order: 1;
+				margin-top: 1rem !important;
+			}
+
+			& > .price
+			{ 
+				order: 2; 
+				position: absolute;
+				top: 0;
+				right: 2rem;
+			}
+
+			& > ul 
+			{ 
+				order: 3;
+				display: flex;
+				flex-wrap: wrap;
+
+				& > li
+				{
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	.btn--white
+	{
+		font-size: 1.3rem;
+		padding: 1rem;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 537px)
+{
+	.pricing__card.main > h3,
+	.pricing__card:nth-child(2) > h3
+	{
+		display: flex;
+		flex-direction: column;
 	}
 }
