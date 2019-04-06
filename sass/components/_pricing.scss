@@ -7,6 +7,7 @@
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
+	padding: 3rem 0;
 
 	&__content
 	{
@@ -32,8 +33,7 @@
     align-items: center;
     flex: 1;
 		width: 100%;
-		padding: 0;
-		padding-bottom: $m-size;
+		padding: $m-size $s-size;
 	}
 
 	&__card
@@ -46,6 +46,11 @@
 		align-items: center;
 		padding: 3rem 0;
 		transition: all .7s ease;
+
+		& > h3
+		{
+			display: flex;
+		}
 
 		&.main 
 		{
@@ -240,8 +245,7 @@
 
 @media only screen and (max-width: 537px)
 {
-	.pricing__card.main > h3,
-	.pricing__card:nth-child(2) > h3
+	.pricing__card > h3
 	{
 		display: flex;
 		flex-direction: column;
