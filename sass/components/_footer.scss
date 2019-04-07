@@ -1,49 +1,147 @@
-.footer {
-	padding: 3rem 6rem;
+.footer 
+{
+	background-color: #000b27;
+	display: flex;
+	padding: 3rem;
 
-	&__nav {
+	& > *
+	{
+		flex: 1;
+		padding: 0 3rem;
+		align-items: stretch;
 		display: flex;
-		justify-content: space-between;
-		align-content: flex-start;
-		border-bottom: 1px solid $gray-light;
-		padding: 2rem;
+		flex-direction: column;
 
-		&-brand {
-			display: flex;
-			flex-wrap: nowrap;
-			align-content: center;
-
-			&--img {
-				max-height: 2.8rem;
-			}
-
-			&--text {
-				color: $heading-color;
-				font-size: 2.5rem;
-				font-weight: 700;
-				padding-left: $s-size;
-			}
+		&:not(:first-child)
+		{
+			border-left: 1px solid currentColor;
 		}
+	}
 
-		&-menu {
+	& a
+	{
+		color: #a2a2a2;
+		font-size: $s-size;
+		transition: color .4s;
 
-			& > ul {
-				list-style-type: none;
+		&:hover
+		{
+			color: $gray-shadow;
+		}
+	}
 
-				& > li {
-					display: inline-block;
-					margin-right: 3rem;
+	& ul
+	{
+		list-style: none;
+		padding: 2rem 0;
 
-					& > a {
-						color: $text-color;
-					}
-				}
+		& > li
+		{
+			padding-top: 1.5rem;
+
+			& > span
+			{
+				font-size: $s-size;
+				color: #a2a2a2;
 			}
 		}
 	}
 
-	&__copyright {
-		padding-top: 3rem;
-		font-size: $s-size;
+	&__quick-links > div
+	{
+		display: flex;
+
+		& > *
+		{
+			flex: 1;
+		}
+	}
+
+	&__extras
+	{
+		align-items: flex-end;
+
+		& > img
+		{
+			max-height: 4rem;
+		}
+
+		& > .footer__social
+		{
+			& img
+			{
+				opacity: .6;
+				transition: opacity .4s;
+
+				&:hover
+				{
+					opacity: 1;
+				}
+			}
+
+			& > ul
+			{
+				display: flex;
+			}
+
+			& > ul > li
+			{
+				padding-left: 3rem;
+			}
+		}
+
+		& > p
+		{
+			font-size: 1.2rem;
+			color: #a2a2a2;
+			text-align: right;
+		}
+	}
+}
+
+@media only screen and (max-width: 1022px)
+{
+	.footer
+	{
+		flex-wrap: wrap;
+
+		& > *:last-child
+		{
+			flex-basis: 100%;
+			align-items: center;
+			padding-top: 2rem;
+			border-left: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px)
+{
+	.footer
+	{
+		flex-direction: column;
+		align-items: center;
+
+		& > *
+		{
+			width: 100%;
+			text-align: center;
+
+			&:not(:first-child)
+			{
+				padding-top: 2rem;
+				border: none;
+			}
+		}
+
+		& ul
+		{
+			padding: 1rem 0;
+		}
+
+		& h5
+		{
+			text-decoration: underline;
+		}
 	}
 }
