@@ -67,7 +67,7 @@
 			}
 
 			& > span
-			{
+			{ 
 				font-size: 1.6rem !important;
 			}
 		}
@@ -108,5 +108,67 @@
 		font-size: 1.3rem;
 		text-align: justify;
 		padding-top: $s-size;
+	}
+}
+
+@media only screen and (max-width: 1050px)
+{
+	.team
+	{
+		&__member
+		{
+			&.ceo
+			{
+				flex: 100%;
+				order: 0;
+			}
+
+			&:not(.ceo)
+			{
+				flex: 25%;
+				margin-top: -3rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 880px)
+{
+	.team
+	{
+		padding: 2rem 1rem;
+
+		&__members
+		{
+			padding: 0;
+		}
+
+		&__member
+		{
+			background-color: transparent;
+			border: none !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px)
+{
+	.team
+	{
+		&__member > img
+		{
+			max-width: 75%;
+		}
+	}
+}
+
+@media only screen and (max-width: 580px)
+{
+	.team
+	{
+		&__member:not(.ceo)
+		{
+			flex: 50%;
+		}
 	}
 }
