@@ -247,30 +247,30 @@
 
 		<!-- CONTACT -->
 		<section class="contact">
-			<div class="contact__heading">
-				<h2 class="h2-black">Contact Us</h2>
-				<p>Do you have any doubts? Send us a message, we'll reply as soon as possible.</p>
+			<div class="contact__left">
+				<h2 class="contact__title">Contact Us</h2>
+				<p>
+					Do you have any doubts? <br> Send us a message, we'll reply as soon as possible.
+				</p>
 			</div>
 
 			<form action="" class="contact__form">
-				<div class="contact__form-inputs">
-					<div class="contact__input-group">
-						<label for="name"> Your name: </label>
-						<input type="text" id="name" name="name" required>
-					</div>
-					
-					<div class="contact__input-group">
-						<label for="email"> Your email: </label>
-						<input type="email" id="email" name="email" required>
-					</div>
+				<div class="contact__input-group">					
+					<input type="text" id="name" name="name" required placeholder="Your name:">
+				</div>
+				
+				<div class="contact__input-group">
+					<input type="email" id="email" name="email" required placeholder="Your email: e.g. johndoe@gmail.com">
 				</div>
 
-				<div class="contact__form-textarea">
+				<div class="contact__textarea">
 					<label for="message">Your message:</label>
 					<textarea name="message" id="message" required></textarea>
 				</div>
 
-				<button type="submit" class="contact__form-button btn btn--white"> Send message</button>
+				<button type="submit" class="btn btn--yellow" style="color: #000 !important;">
+					Send message
+				</button>
 			</form>
 		</section>
 	</main>

@@ -26,6 +26,11 @@ $xl-size: 5.4rem;
 .mb-4 { margin-bottom: 4rem; }
 
 //Buttons
+a, button
+{
+	cursor: pointer !important;
+}
+
 .btn, .btn:link, .btn:active, .btn:visited
 {
 	color: $gray-dark;

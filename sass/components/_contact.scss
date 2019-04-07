@@ -1,102 +1,113 @@
-.contact {
-	background-color: #2c3e50;
-	padding: 5rem;
+.contact 
+{
+	background-color: #001955;
+	color: #fff;
+	padding: $xl-size $l-size;
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
 
-	&__heading {
-		flex: 0 0 100%;
-		text-align: center;
+	&__left
+	{
+		flex: 1;
+		align-self: flex-start;
+		padding: 2rem 6rem;
 
-		& > p {
-			font-size: $m-size;
-			color: darken($gray-shadow, 20%);
-			padding-top: 2rem;
+		& > p
+		{
+			color: $gray-shadow;
+			font-size: 2rem;
+			padding-top: 2.5rem;
 		}
 	}
 
-	&__form {
-		flex: 0 0 100%;
-		margin-top: 1rem;
+	&__form
+	{
+		flex: 1;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		flex-direction: column;
+		justify-content: space-evenly;
+		padding-left: 4rem;
 
-		&-inputs,
-		&-textarea {
-			padding: 3rem;
-		}
-
-		&-inputs {
-			flex: 0 0 50%;
-		}
-
-		&-textarea {
-			flex: 0 0 50%;
-
-			& > label {
-				color: $gray-light;
-				font-size: $m-size;
-				font-weight: 700;
-				padding-left: $m-size;
-			}
-
-			& > textarea {
-				font-family: $f-body;
-				letter-spacing: 1px;
-				color: $gray-light;
-				background-color: lighten(#34495e, 5%);
-				width: 100%;
-				height: 85%;
-				display: block;
-				border-radius: 2rem;
-				margin-top: .8rem;
-				outline: none;
-				border: none;
-				resize: none;
-				padding: 1.5rem;
-				transition: all .3s;
-
-				&:focus {
-				  background-color: lighten(#34495e, 10%);
-				}
-			}
-		}
-
-		&-button {
-			flex: 0 0 30%;
+		& > *
+		{
+			margin-top: 2rem;
 		}
 	}
 
-	&__input-group {
-		&:not(:first-child) {
-			padding-top: 3rem;
-		}
-
-		& > label {
-			color: $gray-light;
-			font-size: $m-size;
-			font-weight: 700;
-			padding-left: $m-size;
-		}
-
-		& > input[type=text],
-		& > input[type=email] {
-			font-family: $f-body;
-			letter-spacing: 1px;
-			background-color: lighten(#34495e, 5%);
-			border: none;
-			display: block;
+	&__input-group
+	{
+		& > input
+		{
 			width: 100%;
-			padding: $m-size;
-			color: $gray-light;
-			border-radius: 100px;
-			margin-top: .8rem;
-			transition: all .3s;
+			border: 1px solid $yellow-dark;
+			background-color: #001955;
+			padding: 1rem;
+			color: $gray-shadow;
+			font-family: 'Quicksand', sans-serif;
 
-			&:focus {
-			  background-color: lighten(#34495e, 10%);
+			&:focus
+			{
+				outline: none;
+				background-color: #00123c;
 			}
+
+			&::placeholder
+			{
+				color: $yellow-light;
+			}
+		}
+	}
+
+	&__textarea
+	{
+		display: flex;
+		flex-direction: column;
+
+		& > label
+		{
+			font-size: 1.8rem;	
+		}
+
+		& > textarea
+		{
+			height: 10rem;
+			margin-top: 1rem;
+			border: 1px solid $yellow-dark;
+			background-color: #001955;
+			padding: 1rem;
+			color: $gray-shadow;
+			font-family: 'Quicksand', sans-serif;
+
+			&:focus
+			{
+				outline: none;
+				background-color: #00123c;
+			}
+		}
+	}
+
+	button[type="submit"]
+	{
+		align-self: center;
+	}
+}
+
+@media only screen and (max-width: 665px)
+{
+	.contact
+	{
+		flex-direction: column;
+		align-items: stretch;
+
+		&__left
+		{
+			padding: 2rem 0;
+		}
+
+		&__form
+		{
+			padding-left: 0;
 		}
 	}
 }
