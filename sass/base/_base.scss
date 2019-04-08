@@ -7,7 +7,8 @@ html
 {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body 
@@ -20,7 +21,7 @@ body
 button
 {
 	border: none;
-	font-family: 'Quicksand', sans-serif;
+	font-family: $font;
 }
 
 a:link,

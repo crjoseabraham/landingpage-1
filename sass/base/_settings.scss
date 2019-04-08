@@ -9,7 +9,6 @@ $blue-dark: #3972c5;
 $red-light: #fe8f8d;
 $red-dark: #f14747;
 $green: #63b55a;
-$gray-light: #f2f2f2;
 $gray-shadow: #ddd;
 $gray-dark: #555;
 
@@ -137,29 +136,5 @@ a.nav--green:hover
 	&:hover
 	{
 		background-color: lighten($yellow-dark, 5%);
-	}
-}
-
-.btn--white
-{
-	font-size: 1.6rem;
-	background-color: #fff;
-	border-bottom:  .5rem solid darken(#fff, 10%);
-	position: relative;
-	padding: 1rem 3rem;
-	border-radius: 10px;
-	color: $gray-dark !important;
-	height: 4.5rem;
-
-	&:active
-	{
-		transform: translate(0 , .3rem);
-		-webkit-transform: translate(0, .3rem);
-		border-bottom: 1px solid darken(#fff, 10%);
-	}
-
-	&:hover
-	{
-		background-color: lighten(#fff, 5%);
 	}
 }

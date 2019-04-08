@@ -21,7 +21,8 @@
       right: 5rem;
       opacity: .4;
       z-index: 8;
-      transform: rotate(30deg);
+      -webkit-transform: rotate(30deg);
+              transform: rotate(30deg);
     }
 
     &-3
@@ -73,7 +74,8 @@
     position: absolute;
     top: 28rem;
     left: 2rem;
-    transform: rotate(-14deg);
+    -webkit-transform: rotate(-14deg);
+            transform: rotate(-14deg);
     z-index: 8;
     opacity: .3;
 
@@ -84,7 +86,8 @@
       border-left: 5rem solid transparent;
       border-right: 5rem solid transparent;
       border-top: 10rem solid #36b9cc;
-      transform: rotate(40deg);
+      -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
       position: absolute;
       top: 82%;
       right: 2%;
@@ -102,7 +105,8 @@
       position: absolute;
       top: 28rem;
       right: 2rem;
-      transform: rotate(-14deg);
+      -webkit-transform: rotate(-14deg);
+              transform: rotate(-14deg);
       z-index: 8;
       opacity: .3;
     }
@@ -143,7 +147,8 @@
     width: 1.5rem;
     z-index: 8;
     opacity: .3;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 
     &::after
     {
@@ -166,7 +171,8 @@
       width: 1.5rem;
       z-index: 8;
       opacity: .4;
-      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
 
       &::after
       {

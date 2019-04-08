@@ -4,15 +4,24 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom right;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	overflow: hidden;
 
 	&__left
 	{
 		padding: 10rem 8rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
 		width: 50%;
 
 		& > p
@@ -61,6 +70,7 @@
 
 	.header
 	{
+		background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 69, 158, .8)), to(rgba(100, 120, 232, .8))), url("../img/440.png");
 		background-image: linear-gradient(to bottom right, rgba(0, 69, 158, .8), rgba(100, 120, 232, .8)), url("../img/440.png");
 		background-size: contain;
 		background-repeat: no-repeat;

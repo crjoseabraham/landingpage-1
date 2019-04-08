@@ -1,20 +1,31 @@
 .footer 
 {
 	background-color: #000b27;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 3rem;
 
 	& > *
 	{
-		flex: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
 		padding: 0 3rem;
-		align-items: stretch;
+		-webkit-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 
 		&:not(:first-child)
 		{
-			border-left: 1px solid currentColor;
+			border-left: 1px solid $gray-dark;
 		}
 	}
 
@@ -22,6 +33,7 @@
 	{
 		color: #a2a2a2;
 		font-size: $s-size;
+		-webkit-transition: color .4s;
 		transition: color .4s;
 
 		&:hover
@@ -49,17 +61,23 @@
 
 	&__quick-links > div
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 
 		& > *
 		{
-			flex: 1;
+			-webkit-box-flex: 1;
+			    -ms-flex: 1;
+			        flex: 1;
 		}
 	}
 
 	&__extras
 	{
-		align-items: flex-end;
+		-webkit-box-align: end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
 
 		& > img
 		{
@@ -71,6 +89,7 @@
 			& img
 			{
 				opacity: .6;
+				-webkit-transition: opacity .4s;
 				transition: opacity .4s;
 
 				&:hover
@@ -81,6 +100,8 @@
 
 			& > ul
 			{
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
 			}
 
@@ -103,12 +124,16 @@
 {
 	.footer
 	{
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
 
 		& > *:last-child
 		{
-			flex-basis: 100%;
-			align-items: center;
+			-ms-flex-preferred-size: 100%;
+			    flex-basis: 100%;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 			padding-top: 2rem;
 			border-left: none;
 		}
@@ -119,8 +144,13 @@
 {
 	.footer
 	{
-		flex-direction: column;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 
 		& > *
 		{

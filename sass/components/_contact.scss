@@ -3,14 +3,24 @@
 	background-color: #001955;
 	color: #fff;
 	padding: $xl-size $l-size;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 
+	// LEFT SIDE: TITLE AND TEXT
 	&__left
 	{
-		flex: 1;
-		align-self: flex-start;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-ms-flex-item-align: start;
+		    align-self: flex-start;
 		padding: 2rem 6rem;
 
 		& > p
@@ -21,12 +31,22 @@
 		}
 	}
 
+	// FORM
 	&__form
 	{
-		flex: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: space-evenly;
+		    -ms-flex-pack: space-evenly;
+		        justify-content: space-evenly;
 		padding-left: 4rem;
 
 		& > *
@@ -52,6 +72,21 @@
 				background-color: #00123c;
 			}
 
+			&::-webkit-input-placeholder
+			{
+				color: $yellow-light;
+			}
+
+			&:-ms-input-placeholder
+			{
+				color: $yellow-light;
+			}
+
+			&::-ms-input-placeholder
+			{
+				color: $yellow-light;
+			}
+
 			&::placeholder
 			{
 				color: $yellow-light;
@@ -61,8 +96,13 @@
 
 	&__textarea
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 
 		& > label
 		{
@@ -89,7 +129,8 @@
 
 	button[type="submit"]
 	{
-		align-self: center;
+		-ms-flex-item-align: center;
+		    align-self: center;
 	}
 }
 
@@ -97,8 +138,13 @@
 {
 	.contact
 	{
-		flex-direction: column;
-		align-items: stretch;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: stretch;
+		    -ms-flex-align: stretch;
+		        align-items: stretch;
 
 		&__left
 		{

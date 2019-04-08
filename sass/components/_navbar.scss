@@ -1,15 +1,22 @@
 .navbar 
 {
 	background-color: #fff;
-	box-shadow: 0 2px 3px $gray-shadow;
+	-webkit-box-shadow: 0 2px 3px $gray-shadow;
+	        box-shadow: 0 2px 3px $gray-shadow;
 	height: 6rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 
 	// LOGO AND BRAND NAME
 	&__brand 
 	{
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-items: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 
 		&--img 
 		{
@@ -22,11 +29,18 @@
 	& > label
 	{
 		display: none;
-		flex-direction: column;
-		justify-content: space-evenly;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: space-evenly;
+		    -ms-flex-pack: space-evenly;
+		        justify-content: space-evenly;
 		width: 5rem;
 		padding: .4rem 1rem;
-		order: 1;
+		-webkit-box-ordinal-group: 2;
+		    -ms-flex-order: 1;
+		        order: 1;
 		cursor: pointer;
 
 		& > span
@@ -34,9 +48,6 @@
 			background-color: $gray-dark;
 			height: 4px;
 			-webkit-transition: all .5s ease;
-			-moz-transition: all .5s ease;
-			-o-transition: all .5s ease;
-			-ms-transition: all .5s ease;
 			transition: all .5s ease;
 		}
 	}
@@ -48,6 +59,8 @@
 
 		&:checked ~ .navbar__menu
 		{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 		}
 
@@ -55,12 +68,14 @@
 		{
 			&:first-child
 			{
-				transform: translateY(1rem) rotate(45deg);
+				-webkit-transform: translateY(1rem) rotate(45deg);
+				        transform: translateY(1rem) rotate(45deg);
 			}
 
 			&:nth-child(2)
 			{
-				transform: translateY(-.1rem) rotate(-45deg);
+				-webkit-transform: translateY(-.1rem) rotate(-45deg);
+				        transform: translateY(-.1rem) rotate(-45deg);
 				-moz-transform: translateY(.1rem) rotate(-45deg);
 			}
 
@@ -75,14 +90,20 @@
 	&__menu 
 	{
 		list-style: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		padding-left: $m-size;
-		flex: 1;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
 
 		& li 
 		{
 			font-size: $s-size;
 			padding-right: $s-size;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 
 			&:last-child
@@ -92,8 +113,12 @@
 
 			& a 
 			{
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
-				align-items: center;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
 			}
 		}
 	}
@@ -103,10 +128,14 @@
 {
 	.navbar
 	{
-		justify-content: space-between;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 		height: 100%;
 		padding: 1rem 0;
-		flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		position: -webkit-sticky;
 		position: sticky;
 		top: 0;
 		z-index: 100;
@@ -114,21 +143,36 @@
 		// HAMBURGER MENU
 		& > label
 		{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			order: 0;
+			-webkit-box-ordinal-group: 1;
+			    -ms-flex-order: 0;
+			        order: 0;
 		}
 
 		&__menu
 		{
-			order: 1;
+			-webkit-box-ordinal-group: 2;
+			    -ms-flex-order: 1;
+			        order: 1;
 			display: none;
-			flex-direction: column;
-			flex: 0 0 100%;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-box-flex: 0;
+			    -ms-flex: 0 0 100%;
+			        flex: 0 0 100%;
 
 			& li
 			{
-				flex: 1;
-				justify-content: center;
+				-webkit-box-flex: 1;
+				    -ms-flex: 1;
+				        flex: 1;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
 				
 
 				&:last-child
@@ -138,7 +182,9 @@
 
 				& a 
 				{
-					justify-content: center;
+					-webkit-box-pack: center;
+					    -ms-flex-pack: center;
+					        justify-content: center;
 					padding: 1.5rem 2rem;
 				}
 			}
