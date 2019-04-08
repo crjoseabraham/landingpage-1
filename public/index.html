@@ -8,13 +8,15 @@
 	<meta name="description" content="The very very best fictional web development service you'll find on internet">
 	<meta name="keywords" content="frontend, landing page, landinpage, webdesign, web design">
 	<title> CodeBlocks | We convert your ideas into real modern websites </title>
+	<link rel="icon" type="image/png" href="./img/logo.png">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
 	<!-- NAVBAR -->
-	<nav class="navbar">
+	<nav class="navbar" data-aos="fade-down">
 		<a href="#" class="btn navbar__brand">
 			<img src="./img/company-logo.png" alt="CodeBlocks logo" class="navbar__brand--img">
 		</a>
@@ -37,7 +39,7 @@
 
 	<!-- HEADER -->
 	<header class="header">
-		<div class="header__left">
+		<div class="header__left" data-aos="zoom-in-up">
 			<h1 class="header__title">
 				UI Design <br>
 				App Development <br>
@@ -70,7 +72,7 @@
 		</section>
 		
 		<!-- SERVICES -->
-		<section class="services">
+		<section class="services" data-aos="fade-up">
 			<div class="services__title">
 				<h2>Hi! 👋 We're CodeBlocks – This is what we do:</h2>
 				<p>
@@ -79,7 +81,7 @@
 			</div>
 			
 			<div class="services__description">
-				<div class="services__service">
+				<div class="services__service" data-aos="fade-up-right">
 					<img src="img/html-5.png" alt="Frontend services">
 					<h3 class="mt-2"> Front-End Coding </h3>
 					<p>
@@ -88,7 +90,7 @@
 					<a href="#" class="btn btn--yellow mt-4"> More details </a>
 				</div>
 
-				<div class="services__service">
+				<div class="services__service" data-aos="fade-up">
 					<img src="img/wordpress.png" alt="Wordpress dev">
 					<h3 class="mt-2"> Wordpress Development </h3>
 					<p>
@@ -97,7 +99,7 @@
 					<a href="#" class="btn btn--yellow mt-4"> More details </a>
 				</div>
 
-				<div class="services__service">
+				<div class="services__service" data-aos="fade-up-left">
 					<img src="img/settings.png" alt="Web Apps Development">
 					<h3 class="mt-2"> Web Applications </h3>
 					<p>
@@ -120,7 +122,7 @@
 			<div class="pricing__content">
 				<h2 class="pricing__title"> Plans & Pricing </h2>
 
-				<div class="pricing__cards">
+				<div class="pricing__cards" data-aos="flip-up">
 					<div class="pricing__card">
 						<h3> Web &nbsp;<p class="breakpoint">Application</p> </h3>
 						<span class="price mt-2">
@@ -185,7 +187,7 @@
 
 			<h2 class="team__title">Meet our team!</h2>
 
-			<div class="team__members">
+			<div class="team__members" data-aos="zoom-in">
 				<div class="team__member cto">
 					<img src="./img/member-2.jpg">
 					<h4>Dana Ferguson</h4>
@@ -353,5 +355,10 @@
 			</p>
 		</div>
 	</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+	AOS.init();
+</script>
 </body>
 </html>
